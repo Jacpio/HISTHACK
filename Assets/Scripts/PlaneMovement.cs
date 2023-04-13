@@ -6,8 +6,12 @@ public class PlaneMovement : MonoBehaviour
 {
 
     [SerializeField] float speed;
+
     private Vector2 mousePos;
-    
+    private Vector2 objectPos;
+    private Vector2 finalPos;
+    private Vector2 normalPos;
+
     private Rigidbody2D rb;
     
     
@@ -25,17 +29,17 @@ public class PlaneMovement : MonoBehaviour
     }
     void RotatePlayer ()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition).normalized;
 
-        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        transform.up = mousePos;
+        mousePos = Input.mousePosition;
+        objectPos = Camera.main.WorldToScreenPoint(transform.position);
+        finalPos = mousePos - objectPos;
+        normalPos = finalPos.normalized;
+        float angle = Mathf.Atan2(normalPos.y, normalPos.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
     }
     void MovePlayer ()
     {
-        rb.AddForce(mousePos * speed, ForceMode2D.Force);
+        rb.velocity = normalPos * speed;
     }
-    void SpeedControl ()
-    {
-        rb.velocity = rb.velocity.normalized * speed;
-    }
+    
 }
