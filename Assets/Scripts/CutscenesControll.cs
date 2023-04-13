@@ -17,7 +17,7 @@ public class CutscenesControll : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (currentLine < lines.Length)
+        if (currentLine != lines.Length-1)
         {
             for (int i = 0; i <= lines.Length; i++)
             {
