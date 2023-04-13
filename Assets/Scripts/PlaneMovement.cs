@@ -6,6 +6,7 @@ public class PlaneMovement : MonoBehaviour
 {
 
     [SerializeField] float speed;
+    [SerializeField] float degreeOffset;
 
     private Vector2 mousePos;
     private Vector2 objectPos;
@@ -35,7 +36,7 @@ public class PlaneMovement : MonoBehaviour
         finalPos = mousePos - objectPos;
         normalPos = finalPos.normalized;
         float angle = Mathf.Atan2(normalPos.y, normalPos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + degreeOffset));
     }
     void MovePlayer ()
     {
