@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="29f7f2be-f877-4e45-b575-b1efbe707a62" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/cloud1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../image/cloud1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/cloud2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../image/cloud2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/cloud3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../image/cloud3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/cloud4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../image/cloud4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../image/plane1Anim.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../image/plane1Anim.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2ONFsuwUj0EP9C02FP1bPdFDgA3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29f7f2be-f877-4e45-b575-b1efbe707a62" name="Changes" comment="" />
+      <created>1681393351107</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681393351107</updated>
+      <workItem from="1681393355201" duration="12000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
