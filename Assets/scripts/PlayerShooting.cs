@@ -4,15 +4,25 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
+    
 {
     public GameObject bullet;
     public Transform bulletpos;
 
+    public float fireRate;
+    private float _fireRateTimer;
+
+
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButton(0))
         {
-            GameObject bulletE = Instantiate(bullet,bulletpos.position,transform.rotation);
+            _fireRateTimer += Time.deltaTime;
+            if (_fireRateTimer > fireRate )
+            {
+                GameObject bulletE = Instantiate(bullet, bulletpos.position, transform.rotation);
+                _fireRateTimer = 0;
+            }
         }
     }
 }

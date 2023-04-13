@@ -6,6 +6,7 @@ public class BulletScript : MonoBehaviour
 {
  
     Rigidbody2D rb;
+    public GameObject explosionObject;
     public float bulletSpeed;
 
     private void Start()
@@ -17,6 +18,7 @@ public class BulletScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Instantiate(explosionObject, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
