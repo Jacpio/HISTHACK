@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CutscenesControll : MonoBehaviour
@@ -22,26 +23,23 @@ public class CutscenesControll : MonoBehaviour
         {
             totalCutsceneLengh += line.textSpeed;
         }
-
         totalCutsceneLengh += endLengh;
     }
     void Update()
     {
         for (int i = 0; i < lines.Length; i++)
         {
-           
-            textBox.text = lines[_currentLine].text;
-            if (timer >= lines[_currentLine].textSpeed)
+            textBox.text = lines[currentLine].text;
+            if (timer >= lines[currentLine].textSpeed)
             {
                 timer = 0;
                 currentLine++;
             }
-           
         }
         timer += Time.fixedDeltaTime;
         float clampTime = Time.time / totalCutsceneLengh;
-        float changeX = Mathf.Lerp(_startX,endPos.position.x, clampTime );
-        float changeY = Mathf.Lerp(_startY,endPos.position.y, clampTime );
+        float changeX = Mathf.Lerp(startX,endPos.position.x, clampTime );
+        float changeY = Mathf.Lerp(startY,endPos.position.y, clampTime );
         movableSprite.position = new Vector3(changeX, changeY, 0);
     }
 }
