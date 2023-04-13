@@ -5,18 +5,14 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public GameObject player;
-    public float bulletSpeed;
-    Rigidbody2D rb;
+    public GameObject bullet;
+    public Transform bulletpos;
 
-    private void Start()
+    void Update()
     {
-        gameObject.transform.rotation = player.transform.rotation;
-        rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(Vector2.up * bulletSpeed);
-    }
-    void FixedUpdate()
-    {
-        
+        if(Input.GetMouseButtonDown(0))
+        {
+            GameObject bulletE = Instantiate(bullet,bulletpos.position,transform.rotation);
+        }
     }
 }
