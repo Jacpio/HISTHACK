@@ -22,4 +22,5 @@ public class BulletScript : MonoBehaviour
         Instantiate(explosionObject, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
+    
 }
