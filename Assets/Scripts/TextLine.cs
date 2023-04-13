@@ -7,4 +7,6 @@ public class TextLine
     public float textSpeed;
     [Multiline]
     public string text;
+    [SerializeField]
+    public Sprite Sprite;
 }
