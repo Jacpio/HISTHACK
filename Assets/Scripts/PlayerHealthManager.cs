@@ -22,6 +22,7 @@ public class PlayerHealthManager : MonoBehaviour
     }
     void Die()
     {
+        FindObjectOfType<AudioController>().Play("GameOver01");
         Instantiate(explosion, transform.position, transform.rotation);
         Destroy(gameObject);
     }

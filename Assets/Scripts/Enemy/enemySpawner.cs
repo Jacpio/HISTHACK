@@ -6,9 +6,9 @@ public class enemySpawner : MonoBehaviour
 {
     [SerializeField] FighterAirCraft enemy;
     [SerializeField] Vector2[] spawnPoints;
-    [SerializeField] int spawnCount;
+    public int spawnCount;
     [SerializeField] bool autospawn;
-    [SerializeField] bool shouldSpawnNow;
+    bool shouldSpawnNow;
     [SerializeField] float spawnDelay;
     private float _timer;
     int spawnPointIndex = 0;
@@ -20,6 +20,7 @@ public class enemySpawner : MonoBehaviour
         }
         enemy.player = FindObjectOfType<PlaneMovement>().transform;
     }
+
     private void Update()
     {
         EnemySpawnHandler();
@@ -27,7 +28,7 @@ public class enemySpawner : MonoBehaviour
     }
     void EnemySpawnHandler ()
     {
-        if (_timer > spawnDelay && spawnCount > 0)
+        if (_timer > spawnDelay && spawnCount > 0 && shouldSpawnNow)
         {
             _timer = 0;
             spawnCount--;
@@ -37,13 +38,10 @@ public class enemySpawner : MonoBehaviour
                 spawnPointIndex++;
             } 
             else spawnPointIndex = 0;
-            
-            
-
         }
 
     }
-    void SpawnEnemies ()
+    public void SpawnEnemies ()
     {
         shouldSpawnNow = true;
     }

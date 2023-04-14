@@ -9,7 +9,8 @@ public class PlaneMovement : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float degreeOffset;
     private bool boost;
-    public float boostTime = -6f;
+    public float startBoostTime = 6f;
+    private float _boostTime;
 
     private Vector2 mousePos;
     private Vector2 objectPos;
@@ -22,6 +23,8 @@ public class PlaneMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        boost = false;
+        _boostTime = 0;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -30,13 +33,15 @@ public class PlaneMovement : MonoBehaviour
     {
         RotatePlayer();
         MovePlayer();
-        if(Input.GetKeyDown(KeyCode.Space) && boost==false && boostTime<=-6) 
+        MouseSpeedReduction();
+
+        if(Input.GetKeyDown(KeyCode.Space) && boost==false && _boostTime <= -startBoostTime) 
         {
             boost = true;
-            boostTime = 3f;
+            _boostTime = 3f;
         }
-        if (boostTime <= 0) boost = false;
-        boostTime -= Time.deltaTime;
+        if (_boostTime <= -startBoostTime) boost = false;
+        _boostTime -= Time.deltaTime;
     }
     void RotatePlayer ()
     {
@@ -54,5 +59,15 @@ public class PlaneMovement : MonoBehaviour
 
         else rb.velocity = normalPos * speed;
     }
-    
+    void MouseSpeedReduction ()
+    {
+        float distance = Vector3.Distance(objectPos, mousePos);
+        if (distance < 5 )
+        {
+            float finalspeed = speed * (distance - 4) / 4;
+            if (finalspeed > 0) rb.velocity = normalPos * finalspeed;
+            else rb.velocity = normalPos * 0;
+        }
+        Debug.Log(distance);
+    }
 }

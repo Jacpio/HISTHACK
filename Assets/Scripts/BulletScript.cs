@@ -22,6 +22,7 @@ public class BulletScript : MonoBehaviour
         if(collision.gameObject.GetComponent<PlayerHealthManager>() != null)
         {
             collision.gameObject.GetComponent<PlayerHealthManager>().currentHealth -= damage;
+            FindObjectOfType<AudioController>().Play("hurt01");
         }
         Instantiate(explosionObject, transform.position, Quaternion.identity);
         Destroy(gameObject);
