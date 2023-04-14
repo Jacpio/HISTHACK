@@ -719,7 +719,7 @@ MonoBehaviour:
   - {fileID: 955133444}
   - {fileID: 1569305601}
   - {fileID: 791885585}
-  intervals: 00000000140000001400000005000000
+  intervals: 000000000f0000000f00000005000000
 --- !u!4 &1782425386
 Transform:
   m_ObjectHideFlags: 0
