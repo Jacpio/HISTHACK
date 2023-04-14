@@ -9,7 +9,7 @@ public class BulletScript : MonoBehaviour
     public float degreeOffset;
     public GameObject explosionObject;
     public float bulletSpeed;
-
+    public int damage;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,6 +19,10 @@ public class BulletScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.GetComponent<PlayerHealthManager>() != null)
+        {
+            collision.gameObject.GetComponent<PlayerHealthManager>().currentHealth -= damage;
+        }
         Instantiate(explosionObject, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
