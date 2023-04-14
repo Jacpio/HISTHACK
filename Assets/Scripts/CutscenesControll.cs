@@ -13,6 +13,8 @@ public class CutscenesControll : MonoBehaviour
     private int currentLine;
     public Image image;
     public string sceneName;
+    [Header("czas dodatkowy przed zmian¹ sceny")]
+    public int exitTime;
     void Start()
     {
         timer = 0;
@@ -21,26 +23,25 @@ public class CutscenesControll : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (currentLine != lines.Length-1)
-        {
             for (int i = 0; i <= lines.Length; i++)
             {
                 textBox.text = lines[currentLine].text;
                 image.sprite = lines[currentLine].Sprite;
-                if (timer >= lines[currentLine].textSpeed*2)
+               
+                if (currentLine < lines.Length - 1 && timer >= lines[currentLine].textSpeed * 2)
                 {
-                    timer = 0;
-                    currentLine++;
-                    
+                timer = 0;
+                 currentLine++;      
                 }
 
-                timer += Time.fixedDeltaTime;
-            }        
-        }
-        else
-        {
-            SceneManager.LoadScene(sceneName);
-        }
+                else if (timer >= lines[currentLine].textSpeed*2 + exitTime)
+                {
+                SceneManager.LoadScene(sceneName);
+                }
+               
+            }
+        timer += Time.fixedDeltaTime;
+        
 
     }
 }
