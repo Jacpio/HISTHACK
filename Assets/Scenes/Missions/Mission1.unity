@@ -160,25 +160,32 @@ MonoBehaviour:
     pitch: 1
     soundChannel: 1
     isLoop: 1
-  - name: Shoot01
-    clip: {fileID: 8300000, guid: 545a0a325618a474581550638f69c51d, type: 3}
+  - name: shoot01
+    clip: {fileID: 8300000, guid: 44b6a2b8d357a834394be8557bf70648, type: 3}
     source: {fileID: 0}
     volume: 0.5
     pitch: 1
     soundChannel: 0
     isLoop: 0
-  - name: HurtPlayer
+  - name: hurt01
     clip: {fileID: 8300000, guid: 460f3e2b614ff9f4caf7243c3c3df6cc, type: 3}
     source: {fileID: 0}
     volume: 0.5
     pitch: 1
     soundChannel: 0
     isLoop: 0
-  - name: 
-    clip: {fileID: 0}
+  - name: GameOver01
+    clip: {fileID: 8300000, guid: deef40d18edd69644823a4a13b7cc0ab, type: 3}
     source: {fileID: 0}
-    volume: 0
-    pitch: 0
+    volume: 0.6
+    pitch: 1
+    soundChannel: 0
+    isLoop: 0
+  - name: shoot02
+    clip: {fileID: 8300000, guid: 545a0a325618a474581550638f69c51d, type: 3}
+    source: {fileID: 0}
+    volume: 0.6
+    pitch: 1
     soundChannel: 0
     isLoop: 0
   - name: 
