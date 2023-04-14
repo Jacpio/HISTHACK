@@ -9,7 +9,7 @@ public class PlaneMovement : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float degreeOffset;
     private bool boost;
-    public float boostTime = 3f;
+    public float boostTime = -6f;
 
     private Vector2 mousePos;
     private Vector2 objectPos;
@@ -30,7 +30,7 @@ public class PlaneMovement : MonoBehaviour
     {
         RotatePlayer();
         MovePlayer();
-        if(Input.GetKeyDown(KeyCode.Space) && boost==false) 
+        if(Input.GetKeyDown(KeyCode.Space) && boost==false && boostTime<=-6) 
         {
             boost = true;
             boostTime = 3f;
