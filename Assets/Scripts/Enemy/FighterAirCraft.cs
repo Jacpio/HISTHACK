@@ -43,6 +43,7 @@ public class FighterAirCraft : MonoBehaviour, Enemy
         float distance = Vector3.Distance(gameObject.transform.position, player.position);
         finalspeed = moveSpeed * (distance - 4) / 4;
         if (finalspeed > 0) rb.velocity = normalPos * finalspeed;
+        else if (finalspeed > 2) rb.velocity = normalPos * 2;
         else rb.velocity = normalPos * 0;
     }
     private void AttackLogic ()
