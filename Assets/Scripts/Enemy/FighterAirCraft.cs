@@ -1,10 +1,11 @@
 using System;
+using System.Xml.Linq;
 using UnityEngine;
 
 public class FighterAirCraft : MonoBehaviour, Enemy
 {
     public Transform player;
-    public float moveSpeed, degreeOffset;
+    public float moveSpeed, finalspeed, degreeOffset;
     private float playerX, playerY;
     private float timer = 0;
     float angle;
@@ -38,17 +39,19 @@ public class FighterAirCraft : MonoBehaviour, Enemy
         normalPos = finalPos.normalized;
         angle = Mathf.Atan2(normalPos.y, normalPos.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + degreeOffset));
-        
-        rb.velocity = normalPos * moveSpeed;
+        float distance = Vector3.Distance(gameObject.transform.position, player.position);
+        finalspeed = moveSpeed * (distance - 4) / 4;
+        if (finalspeed > 0) rb.velocity = normalPos * finalspeed;
+        else rb.velocity = normalPos * 0;
     }
     private void AttackLogic ()
     {
-        /*
-        Vector3 difference = new Vector3(
+        
+        /*Vector3 difference = new Vector3(
           player.position.x - transform.position.x,
           player.position.y - transform.position.y,
           player.position.z - transform.position.z);
-
+        
         float distance = (float)Math.Sqrt(
           Math.Pow(difference.x, 2f) +
           Math.Pow(difference.y, 2f) +
