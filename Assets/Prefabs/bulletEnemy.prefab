@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   degreeOffset: -180
   explosionObject: {fileID: 2414241830232845479, guid: 6db8170b6d13f4b41b467e554f75dd42, type: 3}
-  bulletSpeed: 20
+  bulletSpeed: 15
   damage: 10
 --- !u!50 &4881102201248693606
 Rigidbody2D:
