@@ -779,7 +779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBox: {fileID: 376014767}
   lines:
-  - textSpeed: 8
+  - textSpeed: 15
     text: "21 czerwca 1940 roku Zumbach dostal sie do Wielkiej Brytanii na pokladzie
       wywozacego zo\u0142nierzy przez Kanal La Manche statku \u201EKmicic\u201D. "
     Sprite: {fileID: 21300000, guid: 57a76ecef9dab7c42b09a904efd881d9, type: 3}
