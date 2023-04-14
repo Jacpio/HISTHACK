@@ -6,7 +6,6 @@ public class PlayerHealthManager : MonoBehaviour
 {
     [SerializeField] int startHealth = 100;
     public float currentHealth;
-    public GameObject health;
     public GameObject explosion;
 
     private void Start()
@@ -16,7 +15,7 @@ public class PlayerHealthManager : MonoBehaviour
 
     private void Update()
     {
-        health.GetComponent<Image>().fillAmount = currentHealth * 0.01f;
+       
         if (currentHealth <= 0)
         {
             Die();
@@ -24,7 +23,16 @@ public class PlayerHealthManager : MonoBehaviour
     }
     void Die()
     {
-        FindObjectOfType<AudioController>().Play("GameOver01");
+
+        if (gameObject.layer == 6)
+        {
+            FindObjectOfType<AudioController>().Play("GameOver02");
+        }
+        else
+        {
+            Score.score += 100;
+            FindObjectOfType<AudioController>().Play("GameOver01");
+        }
         Instantiate(explosion, transform.position, transform.rotation);
         Destroy(gameObject);
     }
