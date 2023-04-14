@@ -36,7 +36,7 @@ public class CutscenesControll : MonoBehaviour
 
                 else if (timer >= lines[currentLine].textSpeed*2 + exitTime)
                 {
-                SceneManager.LoadScene(sceneName);
+                LoadingSceneLoader.LoadScene(sceneName);
                 }
                
             }
