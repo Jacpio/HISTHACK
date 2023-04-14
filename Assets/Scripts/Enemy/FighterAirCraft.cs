@@ -69,5 +69,6 @@ public class FighterAirCraft : MonoBehaviour, Enemy
         _retreatTimer += Time.deltaTime;
         Shoot();
         AttackLogic();
+        
     }
 }

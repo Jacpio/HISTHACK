@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class PlaneMovement : MonoBehaviour
 
     [SerializeField] float speed;
     [SerializeField] float degreeOffset;
+    private bool boost;
+    public float boostTime = 3f;
 
     private Vector2 mousePos;
     private Vector2 objectPos;
@@ -27,6 +30,13 @@ public class PlaneMovement : MonoBehaviour
     {
         RotatePlayer();
         MovePlayer();
+        if(Input.GetKeyDown(KeyCode.Space) && boost==false) 
+        {
+            boost = true;
+            boostTime = 3f;
+        }
+        if (boostTime <= 0) boost = false;
+        boostTime -= Time.deltaTime;
     }
     void RotatePlayer ()
     {
@@ -40,7 +50,9 @@ public class PlaneMovement : MonoBehaviour
     }
     void MovePlayer ()
     {
-        rb.velocity = normalPos * speed;
+        if (boost == true) rb.velocity = normalPos * speed * 2;
+
+        else rb.velocity = normalPos * speed;
     }
     
 }
