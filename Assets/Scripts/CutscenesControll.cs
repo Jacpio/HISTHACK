@@ -28,7 +28,7 @@ public class CutscenesControll : MonoBehaviour
                 textBox.text = lines[currentLine].text;
                 image.sprite = lines[currentLine].Sprite;
                
-                if (currentLine < lines.Length - 1 && timer >= lines[currentLine].textSpeed)
+                if ((currentLine < lines.Length - 1 && timer >= lines[currentLine].textSpeed) || Input.anyKeyDown)
                 {
                 timer = 0;
                  currentLine++;      
@@ -40,7 +40,7 @@ public class CutscenesControll : MonoBehaviour
                
             }
         timer += Time.fixedDeltaTime;
-        
+            
 
     }
 }

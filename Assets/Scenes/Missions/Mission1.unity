@@ -3263,6 +3263,60 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1044754193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1044754194}
+  - component: {fileID: 1044754195}
+  m_Layer: 0
+  m_Name: spawner wave 3 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1044754194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044754193}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1895241606}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1044754195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044754193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535264eadea7b2f4f9ba37d94be8c71d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 408573795974774386, guid: 7ceb2f8d356554240904982db3734563, type: 3}
+  spawnPoints:
+  - {x: 12, y: 6}
+  - {x: 12, y: 3}
+  - {x: 12, y: 0}
+  - {x: 12, y: -3}
+  - {x: 12, y: -6}
+  spawnCount: 5
+  autospawn: 0
+  spawnDelay: 5
 --- !u!1001 &1099530090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5589,6 +5643,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3057586987812904410, guid: 311a31ac885bdd5408df4fd359a0a707, type: 3}
+      propertyPath: nextScene
+      value: Cutscene2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3057586987812904410, guid: 311a31ac885bdd5408df4fd359a0a707, type: 3}
+      propertyPath: spawners.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3057586987812904410, guid: 311a31ac885bdd5408df4fd359a0a707, type: 3}
       propertyPath: spawners.Array.data[0]
       value: 
       objectReference: {fileID: 1812661887}
@@ -5600,12 +5662,33 @@ PrefabInstance:
       propertyPath: spawners.Array.data[2]
       value: 
       objectReference: {fileID: 1812661885}
+    - target: {fileID: 3057586987812904410, guid: 311a31ac885bdd5408df4fd359a0a707, type: 3}
+      propertyPath: spawners.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3057586987812904410, guid: 311a31ac885bdd5408df4fd359a0a707, type: 3}
+      propertyPath: intervals.Array.data[1]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3057586987812904410, guid: 311a31ac885bdd5408df4fd359a0a707, type: 3}
+      propertyPath: intervals.Array.data[2]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3057586987812904410, guid: 311a31ac885bdd5408df4fd359a0a707, type: 3}
+      propertyPath: intervals.Array.data[3]
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3057586987812904411, guid: 311a31ac885bdd5408df4fd359a0a707, type: 3}
       propertyPath: m_Name
       value: waveController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 311a31ac885bdd5408df4fd359a0a707, type: 3}
+--- !u!4 &1895241606 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3536194790254436844, guid: 1ddf5e3afd31a2c4ba76dff21b8c3441, type: 3}
+  m_PrefabInstance: {fileID: 1812661884}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1936786822
 GameObject:
   m_ObjectHideFlags: 0
