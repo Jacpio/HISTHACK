@@ -10,17 +10,12 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] Scrollbar graphicsSettings;
     void Start()
     {
-        
+        DebugValues();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
     public void ValueChanged()
     {
-        Debug.Log($"current quality level is {QualitySettings.GetQualityLevel()}");
         GlobalAudioSettings.soundVolume = soundScroll.value;
         GlobalAudioSettings.musicVolume = musicScroll.value;
         switch (graphicsSettings.value)
@@ -38,5 +33,12 @@ public class SettingsManager : MonoBehaviour
                 break;
 
         }
+        DebugValues();
+    }
+    void DebugValues()
+    {
+        Debug.Log($"current quality level is {QualitySettings.GetQualityLevel()}");
+        Debug.Log($"current sound level is {GlobalAudioSettings.soundVolume}");
+        Debug.Log($"current music level is {GlobalAudioSettings.musicVolume}");
     }
 }
