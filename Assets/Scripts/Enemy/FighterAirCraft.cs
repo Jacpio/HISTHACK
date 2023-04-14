@@ -29,6 +29,7 @@ public class FighterAirCraft : MonoBehaviour, Enemy
         if (timer >= shootTime)
         {
             timer = 0;
+            FindObjectOfType<AudioController>().Play("shoot02");
             Instantiate(bullet, new Vector3(shootPoint.position.x, shootPoint.position.y), Quaternion.Euler(0,0, angle - bulletOffset));
         }
     }

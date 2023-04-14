@@ -20,6 +20,7 @@ public class PlayerShooting : MonoBehaviour
             _fireRateTimer += Time.deltaTime;
             if (_fireRateTimer > fireRate )
             {
+                FindObjectOfType<AudioController>().Play("shoot01");
                 GameObject bulletE = Instantiate(bullet, bulletpos.position, transform.rotation);
                 _fireRateTimer = 0;
             }
