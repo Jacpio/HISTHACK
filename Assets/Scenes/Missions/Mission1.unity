@@ -3675,7 +3675,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Zabij wrog\xF3w"
+  m_text: "Zestrzel wrog\xF3w"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25fbce89b074a8842a9c154c4535c517, type: 2}
   m_sharedMaterial: {fileID: -1945190175852008026, guid: 25fbce89b074a8842a9c154c4535c517, type: 2}
@@ -3702,8 +3702,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.95
-  m_fontSizeBase: 26.95
+  m_fontSize: 23.18
+  m_fontSizeBase: 23.18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
