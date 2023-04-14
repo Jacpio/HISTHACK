@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6862745}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -779,10 +779,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBox: {fileID: 376014767}
   lines:
-  - textSpeed: 1
-    text: Tekst1
+  - textSpeed: 8
+    text: "21 czerwca 1940 roku Zumbach dostal sie do Wielkiej Brytanii na pokladzie
+      wywozacego zo\u0142nierzy przez Kanal La Manche statku \u201EKmicic\u201D. "
     Sprite: {fileID: 21300000, guid: 57a76ecef9dab7c42b09a904efd881d9, type: 3}
-  - textSpeed: 1
+  - textSpeed: 5
     text: Tekst2
     Sprite: {fileID: 21300000, guid: 64d6554fe98b630458eb434cfdd1acf0, type: 3}
   image: {fileID: 655465596}

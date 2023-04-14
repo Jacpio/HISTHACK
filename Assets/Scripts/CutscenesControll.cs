@@ -28,15 +28,14 @@ public class CutscenesControll : MonoBehaviour
                 textBox.text = lines[currentLine].text;
                 image.sprite = lines[currentLine].Sprite;
                
-                if (currentLine < lines.Length - 1 && timer >= lines[currentLine].textSpeed * 2)
+                if (currentLine < lines.Length - 1 && timer >= lines[currentLine].textSpeed)
                 {
                 timer = 0;
                  currentLine++;      
                 }
-
-                else if (timer >= lines[currentLine].textSpeed*2 + exitTime)
+                else if (timer >= lines[currentLine].textSpeed + exitTime)
                 {
-                SceneManager.LoadScene(sceneName);
+                    SceneManager.LoadScene(sceneName);
                 }
                
             }
