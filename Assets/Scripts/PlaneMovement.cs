@@ -33,6 +33,8 @@ public class PlaneMovement : MonoBehaviour
     {
         RotatePlayer();
         MovePlayer();
+        MouseSpeedReduction();
+
         if(Input.GetKeyDown(KeyCode.Space) && boost==false && _boostTime <= -startBoostTime) 
         {
             boost = true;
@@ -57,5 +59,15 @@ public class PlaneMovement : MonoBehaviour
 
         else rb.velocity = normalPos * speed;
     }
-    
+    void MouseSpeedReduction ()
+    {
+        float distance = Vector3.Distance(objectPos, mousePos);
+        if (distance < 5 )
+        {
+            float finalspeed = speed * (distance - 4) / 4;
+            if (finalspeed > 0) rb.velocity = normalPos * finalspeed;
+            else rb.velocity = normalPos * 0;
+        }
+        Debug.Log(distance);
+    }
 }
