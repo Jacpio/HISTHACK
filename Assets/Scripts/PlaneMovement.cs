@@ -68,6 +68,6 @@ public class PlaneMovement : MonoBehaviour
             if (finalspeed > 0) rb.velocity = normalPos * finalspeed;
             else rb.velocity = normalPos * 0;
         }
-        Debug.Log(distance);
+       
     }
 }

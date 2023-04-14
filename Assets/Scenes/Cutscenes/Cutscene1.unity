@@ -779,23 +779,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBox: {fileID: 376014767}
   lines:
-  - textSpeed: 15
+  - textSpeed: 2
     text: Dywizjon 303 zaliczany jest do najlepszych jednostek mysliwskich II wojny
       swiatowej. W czasie Bitwy o Wielka Brytanie w 1940 roku przypisywano mu 126
       pewnych zestrzelen.
     Sprite: {fileID: 21300000, guid: a49423bd226a8314bbf773f08d58392b, type: 3}
-  - textSpeed: 20
+  - textSpeed: 2
     text: Slynna eskadra byla jednym z najlepszych dywizjonow alianckich. 15 wrzesnia
       1940 roku - w przelomowym dniu bitwy o Anglie - pokazali wielka klase. Uznani
       zostali za jedna z najlepszych i najskuteczniejszych jednostek mysliwskich
       w czasie II wojny swiatowej.
     Sprite: {fileID: 21300000, guid: 92f21c56e42bf164cabf94003d158f24, type: 3}
-  - textSpeed: 14
+  - textSpeed: 2
     text: Pierwsze zwyciestwo i faktycznie pierwszy lot bojowy Dywizjonu 303 mial
       miejsce po poludniu 30 sierpnia 1940, jeszcze przed oficjalnym uzyskaniem gotowosci
       bojowej.
     Sprite: {fileID: 21300000, guid: 3ef8897225922ec49833a073d357ca96, type: 3}
-  - textSpeed: 12
+  - textSpeed: 2
     text: Podczas lotu treningowego, majacego na celu pozorowane ataki na brytyjskie
       bombowce Bristol Blenheim, Ludwik Paszkiewicz zauwazyl samoloty niemieckie,
       odlaczyl sie i zestrzelil mysliwca - Messerschmitt'a

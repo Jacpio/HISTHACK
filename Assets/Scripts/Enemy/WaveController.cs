@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaveController : MonoBehaviour
 {
     [SerializeField] enemySpawner[] spawners;
     [SerializeField] int[] intervals;
+    [SerializeField] int minScore;
+    [SerializeField] string nextScene;
 
     private int _index;
     private bool _playing;
@@ -32,6 +35,10 @@ public class WaveController : MonoBehaviour
             spawners[_index].SpawnEnemies();
             _index += 1;
             _timer = 0;
+        }
+        if (_index >= spawners.Length && Score.score >= minScore)
+        {
+            SceneManager.LoadScene(nextScene);
         }
     }
 }

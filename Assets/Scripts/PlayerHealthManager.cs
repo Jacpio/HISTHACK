@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class PlayerHealthManager : MonoBehaviour
 {
     [SerializeField] int startHealth = 100;
-    public float currentHealth;
+    [HideInInspector]public float currentHealth;
     public GameObject explosion;
 
     private void Start()
@@ -32,6 +32,10 @@ public class PlayerHealthManager : MonoBehaviour
         {
             Score.score += 100;
             FindObjectOfType<AudioController>().Play("GameOver01");
+        }
+        if (gameObject.layer == 8) {
+            
+        
         }
         Instantiate(explosion, transform.position, transform.rotation);
         Destroy(gameObject);
