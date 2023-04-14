@@ -8,6 +8,7 @@ public class WaveController : MonoBehaviour
 {
     [SerializeField] enemySpawner[] spawners;
     [SerializeField] int[] intervals;
+    [SerializeField] int minScore;
     [SerializeField] string nextScene;
 
     private int _index;
@@ -35,7 +36,7 @@ public class WaveController : MonoBehaviour
             _index += 1;
             _timer = 0;
         }
-        if (_index >= spawners.Length)
+        if (_index >= spawners.Length && Score.score >= minScore)
         {
             SceneManager.LoadScene(nextScene);
         }
