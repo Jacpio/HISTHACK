@@ -1,11 +1,12 @@
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealthManager : MonoBehaviour
 {
     [SerializeField] int startHealth = 100;
-    public int currentHealth;
-
+    public float currentHealth;
+    public GameObject health;
     public GameObject explosion;
 
     private void Start()
@@ -15,6 +16,7 @@ public class PlayerHealthManager : MonoBehaviour
 
     private void Update()
     {
+        health.GetComponent<Image>().fillAmount = currentHealth * 0.01f;
         if (currentHealth <= 0)
         {
             Die();
