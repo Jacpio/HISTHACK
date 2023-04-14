@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealthManager : MonoBehaviour
@@ -27,6 +28,7 @@ public class PlayerHealthManager : MonoBehaviour
         if (gameObject.layer == 6)
         {
             FindObjectOfType<AudioController>().Play("GameOver02");
+            SceneManager.LoadScene("GameOver");
         }
         else
         {
