@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SettingsManager : MonoBehaviour
@@ -40,5 +41,9 @@ public class SettingsManager : MonoBehaviour
         Debug.Log($"current quality level is {QualitySettings.GetQualityLevel()}");
         Debug.Log($"current sound level is {GlobalAudioSettings.soundVolume}");
         Debug.Log($"current music level is {GlobalAudioSettings.musicVolume}");
+    }
+    public void ReturnToMenu ()
+    {
+        SceneManager.LoadScene(0);
     }
 }
