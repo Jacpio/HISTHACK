@@ -19,9 +19,22 @@ public class AudioController : MonoBehaviour
 
         foreach (SoundClip s in sounds)
         {
+            switch(s.soundChannel)
+            {
+                case SoundClip.channel.sound:
+                
+                    s.volume = s.volume * GlobalAudioSettings.soundVolume;
+                    break;
+
+                case SoundClip.channel.music:
+
+                    s.volume = s.volume * GlobalAudioSettings.musicVolume;
+                    break;
+
+            }
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-
+            
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.isLoop;

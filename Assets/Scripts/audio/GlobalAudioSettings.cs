@@ -4,6 +4,6 @@ using UnityEngine;
 
 public static class GlobalAudioSettings
 {
-    public static float soundVolume;
-    public static float musicVolume;
+    public static float soundVolume = 1;
+    public static float musicVolume  = 2;
 }
