@@ -217,6 +217,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7289094525354281472, guid: 1e6e40be2fef0a641b229fa61498e41a, type: 3}
+      propertyPath: startBoostTime
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7289094525354281473, guid: 1e6e40be2fef0a641b229fa61498e41a, type: 3}
       propertyPath: m_RootOrder
       value: 1
