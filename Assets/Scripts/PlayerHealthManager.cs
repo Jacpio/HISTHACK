@@ -23,7 +23,16 @@ public class PlayerHealthManager : MonoBehaviour
     }
     void Die()
     {
-        FindObjectOfType<AudioController>().Play("GameOver01");
+
+        if (gameObject.layer == 6)
+        {
+            FindObjectOfType<AudioController>().Play("GameOver02");
+        }
+        else
+        {
+            Score.score += 100;
+            FindObjectOfType<AudioController>().Play("GameOver01");
+        }
         Instantiate(explosion, transform.position, transform.rotation);
         Destroy(gameObject);
     }
