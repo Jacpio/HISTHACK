@@ -35,6 +35,9 @@ public class guiController : MonoBehaviour
         if (Score.score == 1000)
         {
             SceneManager.LoadScene("Cutscene2");
+        }else if(Score.score == 1200)
+        {
+            SceneManager.LoadScene("Cutscene3");
         }
     }
 }
