@@ -18,15 +18,25 @@ public class SettingsManager : MonoBehaviour
     {
         
     }
-    void ValueChanged()
+    public void ValueChanged()
     {
+        Debug.Log($"current quality level is {QualitySettings.GetQualityLevel()}");
         GlobalAudioSettings.soundVolume = soundScroll.value;
         GlobalAudioSettings.musicVolume = musicScroll.value;
         switch (graphicsSettings.value)
         {
-            case < 0:
-
+            case < 0.3f:
+                QualitySettings.SetQualityLevel(0, true);
                 break;
+
+            case < 0.7f:
+                QualitySettings.SetQualityLevel(1, true);
+                break;
+
+            case 1:
+                QualitySettings.SetQualityLevel(2, true);
+                break;
+
         }
     }
 }

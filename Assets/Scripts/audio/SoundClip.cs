@@ -12,6 +12,12 @@ public class SoundClip
     public float volume;
     [Range(0f, 3f)]
     public float pitch;
+    public enum channel
+    {
+        sound,
+        music
 
+    }
+    public channel soundChannel;
     public bool isLoop;
 }
